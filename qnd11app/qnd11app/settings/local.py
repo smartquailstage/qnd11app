@@ -67,12 +67,12 @@ DATABASES = {
 }
 
 BATON = {
-    'SITE_HEADER': '<img src="/static/img/logo_flor.png" width="180px" >',
-    'SITE_TITLE': 'Isla Floreana CC',
-    'INDEX_TITLE': 'Administración- Centro comunitario Isla Floreana',
+    'SITE_HEADER': '<img src="/static/img/smartquailcirculo.png" width="180px" >',
+    'SITE_TITLE': 'Sistema de información de Líneas de Fomento',
+    'INDEX_TITLE': 'Sistema de Información de líneas de fomento- Quito Distrital',
     #'SUPPORT_HREF': 'https://github.com/otto-torino/django-baton/issues',
-    'COPYRIGHT': 'copyright © 2022 <a href="#">Isla Floreana Centro Comunitario</a>', # noqa
-    'POWERED_BY': '<img src="/static/img/logo.png" width="40px" >',
+    'COPYRIGHT': 'copyright © 2024 <a href="www.smartquail.io">smartquail.io</a>', # noqa
+    'POWERED_BY': '<img src="/static/img/smartquailcirculo.png" width="40px" >',
     'CONFIRM_UNSAVED_CHANGES': True,
     'SHOW_MULTIPART_UPLOADING': True,
     'ENABLE_IMAGES_PREVIEW': True,
@@ -83,7 +83,7 @@ BATON = {
     'MENU_TITLE': 'Isla Floreana',
     'MESSAGES_TOASTS': True,
     'GRAVATAR_DEFAULT_IMG': 'retro',
-    'LOGIN_SPLASH': '/static/img/3.jpg',
+    'LOGIN_SPLASH': '/static/img/m2.jpg',
     'LOGOUT_SPLASH': '/static/img/3.jpg',
     'SEARCH_FIELD': {
         'label': 'Search contents...',
