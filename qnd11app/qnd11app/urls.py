@@ -20,13 +20,10 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from baton.autodiscover import admin
-from wagtail.admin import urls as wagtailadmin_urls
-from wagtail import urls as wagtail_urls
-from wagtail import urls as wagtaildocs_urls
 
 
-def UserAdmin(user):
-    return  user.is_staff
+
+
 
 
 
@@ -39,10 +36,6 @@ urlpatterns = [
     path('baton/', include('baton.urls')),
     path('social-auth/', include('social_django.urls', namespace='social')),
     path('rosetta/', include('rosetta.urls')),
-
-    re_path(r'^businessmedia/', include(wagtailadmin_urls),name='wagtail'),
-    re_path(r'^documents/', include(wagtaildocs_urls)),
-    re_path(r'', include(wagtail_urls)),
 
   ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
 

@@ -35,10 +35,7 @@ DEBUG = os.environ.get("DEBUG")
 ALLOWED_HOSTS = [os.environ.get("ENV_ALLOWED_HOST")]
 
 
-#Nombre del sitio web
-WAGTAIL_SITE_NAME =os.environ.get("WAGTAIL_SITE_NAME")  
 
-WAGTAILIMAGES_MAX_UPLOAD_SIZE = 30 * 1024 * 1024   # 15mb
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 BRAINTREE_MERCHANT_ID = os.environ.get('BRAINTREE_M_ID')
@@ -66,28 +63,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'wagtailmenus',
-    "wagtail_localize",
-    "wagtail_localize.locales",
-    #'wagtail_localize.locales',
-    #"wagtail_localize",
-    'wagtail.admin',
-    #'wagtail.locales',
-    'wagtail.contrib.forms',
-    'wagtail.contrib.redirects',
-    'wagtail.embeds',
-    'wagtail.sites',
-    'wagtail.users',
-    'wagtail.snippets',
-    'wagtail.documents',
-    'wagtail.images',
-    'wagtail.search',
     
-    'wagtail.contrib.settings',
-    'wagtail.contrib.routable_page',
     'social_django',
     
-    'wagtail',
 
     'modelcluster',
     'taggit',
@@ -109,7 +87,7 @@ MIDDLEWARE = [
     #'qnd11app.settings.middleware.GroupAccessMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+   # 'wagtail.contrib.redirects.middleware.RedirectMiddleware',
     'django.middleware.locale.LocaleMiddleware',
    # 'auto_auth.AutoAuthMiddleware',
 ]
@@ -142,12 +120,7 @@ LOCALE_PATHS = (
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
 
 
 # Password validation
@@ -196,24 +169,7 @@ from django.utils.translation import gettext_lazy as _
 
 #WAGTAIL SETTINGS:
 
-WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
-    ('en', _("English")),
-    ('fr', _("French")),
-    ('es', _("Spanish")),
-]
 
-WAGTAILFORMS_NOTIFICATION_FROM_EMAIL = 'info@smartquail.io'
-WAGTAILFORMS_NOTIFICATION_TEMPLATE = 'forms/notification_email.txt'
-
-WAGTAIL_I18N_ENABLED = True
-
-WAGTAILSEARCH_BACKENDS = {
-    'default': {
-        'BACKEND': 'wagtail.search.backends.database',
-    }
-}
-
-WAGTAILADMIN_BASE_URL =  os.environ.get('DOMAINS')
 
 USE_L10N = True
 
